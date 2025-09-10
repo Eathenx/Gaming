@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Eathenx/Gaming/issues"
   },
-  "homepage": "https://github.com/Eathenx/Gaming#readme"
+  "homepage": "https://github.com/Eathenx/Gaming#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.5.0"
+  }
 }
