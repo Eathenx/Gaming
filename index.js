@@ -18,7 +18,7 @@ const usuariosRouter = require("./routes/usuarios")(db);
 const EscuelaRouter = require("./routes/Escuelas")(db);
 const AlumnosRouter = require("./routes/Alumnos")(db);
 
-app.use("/Gaming", usuariosRouter);
+app.use("/Gaming", usuariosRouter); 
 app.use("/Escuela", EscuelaRouter);
 app.use("/Alumnos", AlumnosRouter);
 
@@ -28,3 +28,5 @@ app.get("/", (req, res) => {
 
 // Conexión al servidor
 const PORT = 3000;app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+
+//

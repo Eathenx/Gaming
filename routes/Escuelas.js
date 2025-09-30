@@ -5,8 +5,8 @@ module.exports = (db) => {
   // Crear usuario
   router.post("/add", async (req, res) => {
     try {
-      const { CCT, Escuela, Municippio, Turno, Zona } = req.body;
-      const docRef = await db.collection("Escuelas").add({ CCT, Escuela, Municippio, Turno, Zona });
+      const { CCT, Municipio, Escuela ,Turno, Zona } = req.body;
+      const docRef = await db.collection("Escuelas").add({ CCT, Municipio, Escuela, Turno, Zona });
       res.json({ id: docRef.id, message: "Escuela agregada" });
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -14,7 +14,7 @@ module.exports = (db) => {
   });
 
   // Ver Escuelas
-  router.get("/ver", async (req, res) => {
+  router.get("/ver", async (req, res) => { 
     try {
       const items = await db.collection("Escuelas").get();
       const Escuelas = items.docs.map(doc => ({
