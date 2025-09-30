@@ -14,12 +14,10 @@ admin.initializeApp({
 // Rutas
 const db = admin.firestore();
 
-// Importa los routers
 const usuariosRouter = require("./routes/usuarios")(db);
 const EscuelaRouter = require("./routes/Escuelas")(db);
 const AlumnosRouter = require("./routes/Alumnos")(db);
 
-// Usa los routers con prefijos
 app.use("/Gaming", usuariosRouter);
 app.use("/Escuela", EscuelaRouter);
 app.use("/Alumnos", AlumnosRouter);
